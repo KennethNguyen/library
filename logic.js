@@ -16,14 +16,49 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
 }
 
+function render(book) {
+    var new_div = document.createElement("div");
+    new_div.className = "bookClass";
 
-var new_title = document.querySelector('#title');
-var new_author = document.querySelector('#author');
-var new_page = document.querySelector('#page');
-var new_read = document.querySelector('select');
+    var current_title = document.createElement("p");
+    current_title.innerHTML = book.title;
+    new_div.appendChild(current_title);
 
-const button = document.querySelector('button');
-button.addEventListener('click', function() {
-    let new_book = new Book(new_title.value, new_author.value, new_page.value, new_read.value);
+    var current_author = document.createElement("p");
+    current_author.innerHTML = book.author;
+    new_div.appendChild(current_author);
+
+    var current_pages = document.createElement("p");
+    current_pages.innerHTML = book.pages;
+    new_div.appendChild(current_pages);
+
+    var current_read = document.createElement("p");
+    current_read.innerHTML = book.read;
+    new_div.appendChild(current_read);
+
+    display_library.appendChild(new_div);
+}
+
+function resetLibrary(library) {
+    while (library.firstChild) {
+        library.removeChild(library.firstChild);
+    }
+}
+
+var display_library = document.querySelector(".library");
+
+var new_title = document.querySelector("#title");
+var new_author = document.querySelector("#author");
+var new_pages = document.querySelector("#page");
+var new_read = document.querySelector("select");
+
+var inputs = document.querySelectorAll('input');
+
+const button = document.querySelector("button");
+    button.addEventListener('click', function() {
+    let new_book = new Book(new_title.value, new_author.value, new_pages.value, new_read.value);
+    resetLibrary(display_library);
     addBookToLibrary(new_book);
+    myLibrary.forEach(render);
+    inputs.forEach(inputs => inputs.value = "");
 });
