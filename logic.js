@@ -1,6 +1,6 @@
 let myLibrary = [];
 
-// constructor
+// constructor for Book object
 function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
@@ -16,6 +16,7 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
 }
 
+// display book object info to HTML
 function render(book) {
     var new_div = document.createElement("div");
     new_div.className = "bookClass";
@@ -39,6 +40,8 @@ function render(book) {
     display_library.appendChild(new_div);
 }
 
+// clears all current books in library since submit button renders each book
+// in library again so we do not want any duplicates
 function resetLibrary(library) {
     while (library.firstChild) {
         library.removeChild(library.firstChild);
@@ -46,19 +49,31 @@ function resetLibrary(library) {
 }
 
 var display_library = document.querySelector(".library");
-
 var new_title = document.querySelector("#title");
 var new_author = document.querySelector("#author");
 var new_pages = document.querySelector("#page");
 var new_read = document.querySelector("select");
+var inputs = document.querySelectorAll("input");
+const submit_book = document.querySelector("#submitBook");
 
-var inputs = document.querySelectorAll('input');
-
-const button = document.querySelector("button");
-    button.addEventListener('click', function() {
+// onclick event to submit a new book to the library
+submit_book.addEventListener('click', function() {
     let new_book = new Book(new_title.value, new_author.value, new_pages.value, new_read.value);
     resetLibrary(display_library);
     addBookToLibrary(new_book);
     myLibrary.forEach(render);
-    inputs.forEach(inputs => inputs.value = "");
+    //inputs.forEach(inputs => inputs.value = "");
 });
+
+
+// opening and closing the form to add a new book
+function openForm() {
+    document.getElementById("displayForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("displayForm").style.display = "none";
+}
+
+(document.querySelector("#addBook")).addEventListener('click', openForm);
+(document.querySelector("#closeForm")).addEventListener('click', closeForm);

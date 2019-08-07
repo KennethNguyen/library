@@ -8,23 +8,23 @@
     <body>
         <h1>Library</h1>
         
-        <div class="bookFields">
-            <p>Book Title: <input type="text" id="title" required></p>
-            <p>Book Author: <input type="text" id="author" required></p>
-            <p>Pages in Book: <input type="text" id="page" required></p>
-            <select type="text">
-                <option id="unread">unread</option>
-                <option id="read">read</option>
-            </select>
+        <div class="formPopup" id="displayForm">
+            <form class="bookFields">
+                <p>Book Title: <input type="text" id="title" placeholder="Title" required></p>
+                <p>Book Author: <input type="text" id="author" placeholder="Author" required></p>
+                <p>Pages in Book: <input type="text" id="page" placeholder="Pages" required></p>
+                <select type="text">
+                    <option id="unread">unread</option>
+                    <option id="read">read</option>
+                </select>
+                <button type="button" id="submitBook">Submit Book</button>
+                <button type="button" id="closeForm">Close</button>
+            </form>
         </div><br>
 
-        <div class="addBook">
-            <button>Add a new book</button>
-        </div>
+        <button id="addBook">Add a new book to library</button>
 
-        <div class="library">
-
-        </div>
+        <div class="library"></div>
     </body>
     <script src="logic.js"></script>
 </html>
