@@ -1,3 +1,66 @@
+body {
+    background: rgb(230, 212, 173);
+}
+
+#pageTitle {
+    text-align: center;
+}
+
 .formPopup {
     display: none;
+    background-color: gray;
+    opacity: 0.8;
+    width: 400px;
+    padding: 20px;
+    color: black;
+    font-size: 18px;
+}
+
+#addBook {
+    border: none;
+    background-color: #555;
+    color: white;
+    padding: 20px;
+    opacity: 0.8;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+#submitBook, select, #closeForm {
+    border: none;
+    opacity: 0.8;
+    color: black;
+    padding: 15px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+select {
+    background-color: white;
+}
+
+#submitBook {
+    background-color: lightgreen;
+    margin-top: 10px;
+}
+
+#closeForm {
+    background-color: red;
+}
+
+.columnLabels {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    text-align: center;
+    margin-top: 4px;
+    border: solid black;
+}
+
+.bookClass {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    border: solid black;
+    opacity: 0.9;
 }

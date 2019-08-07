@@ -1,3 +1,5 @@
+// TODO: Cleanup code, Add status change option to read/unread, remove book option, CSS
+
 let myLibrary = [];
 
 // constructor for Book object
@@ -62,7 +64,7 @@ submit_book.addEventListener('click', function() {
     resetLibrary(display_library);
     addBookToLibrary(new_book);
     myLibrary.forEach(render);
-    //inputs.forEach(inputs => inputs.value = "");
+    inputs.forEach(inputs => inputs.value = '');
 });
 
 

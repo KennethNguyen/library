@@ -6,7 +6,7 @@
         <title>Library</title>
     </head>
     <body>
-        <h1>Library</h1>
+        <h1 id="pageTitle">Library</h1>
         
         <div class="formPopup" id="displayForm">
             <form class="bookFields">
@@ -16,13 +16,20 @@
                 <select type="text">
                     <option id="unread">unread</option>
                     <option id="read">read</option>
-                </select>
+                </select><br>
                 <button type="button" id="submitBook">Submit Book</button>
                 <button type="button" id="closeForm">Close</button>
             </form>
         </div><br>
 
         <button id="addBook">Add a new book to library</button>
+
+        <div class="columnLabels">
+                <h3>Title</h3>
+                <h3>Author</h3>
+                <h3>Pages</h3>
+                <h3>Read/Undread</h3>
+        </div>
 
         <div class="library"></div>
     </body>
