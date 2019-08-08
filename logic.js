@@ -35,9 +35,25 @@ function render(book) {
     current_pages.innerHTML = book.pages;
     new_div.appendChild(current_pages);
 
-    var current_read = document.createElement("p");
+    // current Read/Unread status of a book can be changed by clicking on it
+    var current_read = document.createElement("button");
+    current_read.className = "bookStatus";
     current_read.innerHTML = book.read;
+    current_read.addEventListener('click', function() {
+        current_read.innerHTML == "read" ? current_read.innerHTML = "unread" :
+            current_read.innerHTML = "read";
+    });
     new_div.appendChild(current_read);
+
+    var delete_book = document.createElement("button");
+    delete_book.className = "deleteBook";
+    delete_book.innerHTML = "Remove";
+    delete_book.addEventListener('click', function() {
+        var book_index = myLibrary.indexOf(book);
+        myLibrary.splice(book_index,1);
+        new_div.parentNode.removeChild(new_div);
+    });
+    new_div.appendChild(delete_book);
 
     display_library.appendChild(new_div);
 }

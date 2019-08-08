@@ -8,30 +8,40 @@
     <body>
         <h1 id="pageTitle">Library</h1>
         
+        <h2 id="info">Add books, remove books, and change a current book's Read/Unread status by clicking on it's status!</h2>
+
         <div class="formPopup" id="displayForm">
             <form class="bookFields">
                 <p>Book Title: <input type="text" id="title" placeholder="Title" required></p>
                 <p>Book Author: <input type="text" id="author" placeholder="Author" required></p>
                 <p>Pages in Book: <input type="text" id="page" placeholder="Pages" required></p>
-                <select type="text">
+                <p>Status: <select type="text">
                     <option id="unread">unread</option>
                     <option id="read">read</option>
-                </select><br>
+                </select></p><br>
                 <button type="button" id="submitBook">Submit Book</button>
                 <button type="button" id="closeForm">Close</button>
             </form>
         </div><br>
 
-        <button id="addBook">Add a new book to library</button>
+        <div class="addBookWrapper">
+            <button id="addBook">Add a new book to library</button>
+        </div>
 
         <div class="columnLabels">
                 <h3>Title</h3>
                 <h3>Author</h3>
                 <h3>Pages</h3>
-                <h3>Read/Undread</h3>
+                <h3>Read/Unread</h3>
+                <h3>Delete</h3>
         </div>
 
         <div class="library"></div>
+
+        <footer>
+            <p>Hi there! Hope you enjoyed this library project! If you want to see more of my work, check out my <a href="https://github.com/KennethNguyen">github</a>!</p> 
+            <p>-Kenneth Nguyen</p>
+        </footer>
     </body>
     <script src="logic.js"></script>
 </html>
