@@ -8,13 +8,13 @@
     <body>
         <h1 id="pageTitle">Library</h1>
         
-        <h2 id="info">Add books, remove books, and change a current book's Read/Unread status by clicking on it's status!</h2>
+        <h2 id="info">Add books, remove books, and change a current book's Read/Unread status by clicking on its status!</h2>
 
         <div class="formPopup" id="displayForm">
             <form class="bookFields">
-                <p>Book Title: <input type="text" id="title" placeholder="Title" required></p>
-                <p>Book Author: <input type="text" id="author" placeholder="Author" required></p>
-                <p>Pages in Book: <input type="text" id="page" placeholder="Pages" required></p>
+                <p>Book Title: <input type="text" id="title" placeholder="Title"></p>
+                <p>Book Author: <input type="text" id="author" placeholder="Author"></p>
+                <p>Pages in Book: <input type="text" id="page" placeholder="Pages"></p>
                 <p>Status: <select type="text">
                     <option id="unread">unread</option>
                     <option id="read">read</option>
@@ -38,10 +38,27 @@
 
         <div class="library"></div>
 
-        <footer>
-            <p>Hi there! Hope you enjoyed this library project! If you want to see more of my work, check out my <a href="https://github.com/KennethNguyen">github</a>!</p> 
-            <p>-Kenneth Nguyen</p>
-        </footer>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyAaY-XdlhU3qHdhK61wF2wXhBIVVa9NCio",
+        authDomain: "library-75965.firebaseapp.com",
+        databaseURL: "https://library-75965.firebaseio.com",
+        projectId: "library-75965",
+        storageBucket: "",
+        messagingSenderId: "845722169263",
+        appId: "1:845722169263:web:303a89fca7d726fc"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    </script>
     </body>
     <script src="logic.js"></script>
 </html>
