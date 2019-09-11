@@ -2,7 +2,7 @@
 
 Demo: https://kennethnguyen.github.io/library/
 
-## Screenshot (As of September 10, 2019)
+## Screenshot (As of September 11, 2019)
 ![ExampleLibrary](/exampleLibrary.png)
 
 ## Description
