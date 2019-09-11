@@ -3,7 +3,7 @@
 Demo: https://kennethnguyen.github.io/library/
 
 ## Screenshot (As of September 11, 2019)
-![ExampleLibrary](/exampleLibrary.png)
+![ExampleLibrary](exampleLibrary.png)
 
 ## Description
 
